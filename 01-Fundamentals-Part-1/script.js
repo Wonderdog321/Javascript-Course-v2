@@ -143,3 +143,4 @@ console.log("I like to drink water!");
 const bill = 100;
 const tip = bill >= 50 && bill <= 300 ? bill * .15 : bill * 0.20;
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total was ${tip + bill}`);
+//first commit
