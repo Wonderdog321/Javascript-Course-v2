@@ -31,6 +31,8 @@ const resetPage = function () {
 };
 //Updates all the elements whenever the user checks his guess/handles all game logic.
 const game = function () {
+  if (guessBox.value < 1) guessBox.value = 1;
+  if (guessBox.value > 20) guessBox.value = 20;
   let guess = Number(guessBox.value);
   if (guess === randomNum) guessCorrect = true;
   if (guessCorrect) {
