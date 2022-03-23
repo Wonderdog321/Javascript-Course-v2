@@ -52,6 +52,12 @@ const game = function () {
       ? (messageText.textContent = 'Too low!')
       : (messageText.textContent = 'Too high!');
   }
+  if (score === 0) {
+    bodyElement.style.backgroundColor = 'red';
+    checkButton.removeEventListener('click', game);
+    messageText.textContent = 'You lost the game!';
+    numberText.textContent = randomNum;
+  }
 };
 againButton.addEventListener('click', resetPage);
 checkButton.addEventListener('click', game);
